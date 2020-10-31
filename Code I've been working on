@@ -1,0 +1,24 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main(){
+	int SalesPeople, WeeksOfData, Names;
+	double SalesData;
+	ifstream fin;
+	ofstream fout;
+	cout << "How many sales people?" << endl;
+	cin >> SalesPeople;
+	cout << "How many weeks would you like displayed?" << endl;
+	cin >> WeeksOfData;
+	char filemade[99];
+	cout << "What would you like to name the output file?" << endl;
+	cin >> filemade;
+	fin.open("TheSales.txt");
+	//cin >> ;
+	fin.close();
+	fout.open( filemade , ios::app);
+	fout << SalesPeople;
+	fout.close();
+}
